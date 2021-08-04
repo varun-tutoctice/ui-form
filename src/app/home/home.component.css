@@ -1,0 +1,112 @@
+.navbar-custom {
+  background: rgba(0,112,192);
+   margin-right: 0!important;  padding-right: 0px !important;}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+
+
+
+
+
+.content {
+  position:absolute;
+  top: 58px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  overflow-y:scroll;
+  z-index: inherit;
+}
+
+
+.doc-jumbotron {
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: .8rem;
+}
+
+.sidebar.sidebar-style-2 .nav.nav-primary > .nav-item.active > a {
+  /* background: linear-gradient(135deg, rgba(0,112,192) 0%,rgba(0,112,192) 0%,rgba(0,112,192) 28%,#2275ad 60%,rgba(0,112,192) 100%) !important; */
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1), 4px 4px 15px -5px rgba(21, 114, 232, 0.4);
+  background: rgba(0,112,192);
+}
+
+
+.navdrawer-nav .nav-link.active, .navdrawer-nav .nav-link:active {
+  /* background: linear-gradient(135deg, rgba(0,112,192) 0%,#508ce6 0%,rgba(0,112,192) 28%,#7292a8 60%,#28446e 100%) !important;          */
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1), 4px 4px 15px -5px rgba(21, 114, 232, 0.4);
+  background: rgba(0,112,192);
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+/* .navdrawer-nav .nav-link {
+  width: 80%;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-size: 14px;
+} */
+
+
+.navdrawer-nav .nav-link {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+  color: #727275;
+  /* letter-spacing: 0.5px; */
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  padding: none;
+}
+
+/* .navdrawer-content {
+  max-width: none;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+} */
+
+
+/* .navdrawer-permanent-lg {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  display: block !important;
+  right: auto;
+  width: 15rem;
+  z-index: auto;
+} */
+
+/* .doc-main{margin-left:15rem} */
+
+.doc-navdrawer {
+  width: 15rem;
+  overflow: hidden;
+}
+/* .doc-navbar-permanent {
+  margin-left:15rem
+} */
+
+@media (min-width:992px){
+  .doc-main{margin-left:15rem}
+  .doc-jumbotron{margin-left:15rem}
+}
+
+.profileImage{
+  border-radius: 50%;
+  width: 2.65rem;
+  height: 2.7rem;
+}

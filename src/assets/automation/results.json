@@ -1,0 +1,320 @@
+[
+  {
+    "description": "  Enter all the input fields information from product information page and register the product",
+    "elements": [
+      {
+        "description": "",
+        "id": "register-product;user-is-on-registration-page-and-enter-product-information",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User is on registration page and enter product information",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on product registration page",
+            "match": {
+              "location": "steps\\1product\\1product.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3892000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User enters all the product information",
+            "match": {
+              "location": "steps\\1product\\1product.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8553000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "register button will enable",
+            "match": {
+              "location": "steps\\1product\\1product.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1011000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user clicks on register",
+            "match": {
+              "location": "steps\\1product\\1product.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1074000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "user sees successfull notification",
+            "match": {
+              "location": "steps\\1product\\1product.steps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3014000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "register-product",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Register product",
+    "tags": [],
+    "uri": "features\\1product.feature"
+  },
+  {
+    "description": "  Check all the registered products in existing page",
+    "elements": [
+      {
+        "description": "",
+        "id": "see-existing-products;user-checks-the-registerd-product-from-existing-product-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User checks the registerd product from existing product page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on existing product page",
+            "match": {
+              "location": "steps\\2existing\\2existing.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user needs to check table",
+            "match": {
+              "location": "steps\\2existing\\2existing.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4015000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user sees product get added to database",
+            "match": {
+              "location": "steps\\2existing\\2existing.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3014000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "see-existing-products",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "See existing products",
+    "tags": [],
+    "uri": "features\\2existing.feature"
+  },
+  {
+    "description": "  User submits feedback",
+    "elements": [
+      {
+        "description": "",
+        "id": "submit-feedback-in-contact-page;user-enters-all-the-input-fields-in-contact-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User enters all the input fields in contact page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on contact page",
+            "match": {
+              "location": "steps\\3contact\\3contact.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4248000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user enters all the input fields",
+            "match": {
+              "location": "steps\\3contact\\3contact.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4012000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "submit button will enable",
+            "match": {
+              "location": "steps\\3contact\\3contact.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user clicks on submit",
+            "match": {
+              "location": "steps\\3contact\\3contact.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2009000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "submit-feedback-in-contact-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Submit feedback in contact page",
+    "tags": [],
+    "uri": "features\\3contact.feature"
+  }
+]

@@ -1,37 +1,65 @@
-// @ts-check
-// Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
-
-const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
-
 /**
  * @type { import("protractor").Config }
  */
-exports.config = {
-  allScriptsTimeout: 11000,
+ const puppeteer = require('puppeteer');
+ var package = require("../package.json");
+
+ //var buildVersion = package.version;
+ exports.config = {
+  allScriptsTimeout: 220000,
   specs: [
-    './src/**/*.e2e-spec.ts'
+    './features/*.feature'
   ],
+
+
+
+
   capabilities: {
-    browserName: 'chrome'
+    'browserName': 'chrome',
+    chromeOptions: {
+      args: ["--no-sandbox", "--headless", "--disable-gpu", "'start-maximized'" ],
+      binary: puppeteer.executablePath(),
+    }
   },
   directConnect: true,
-  SELENIUM_PROMISE_MANAGER: false,
   baseUrl: 'http://localhost:4200/',
-  framework: 'jasmine',
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() {}
+  framework: 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
+  cucumberOpts: {
+    require: ['./steps/**/*.ts'],
+    format: 'json:../src/assets/automation/results.json',
+    format: ['progress'],
   },
+
+
+
+  ignoreUncaughtExceptions: true,
+  untrackOutstandingTimeouts: true,
+
   onPrepare() {
     require('ts-node').register({
-      project: require('path').join(__dirname, './tsconfig.json')
-    });
-    jasmine.getEnv().addReporter(new SpecReporter({
-      spec: {
-        displayStacktrace: StacktraceOption.PRETTY
-      }
-    }));
-  }
+      project: 'e2e/tsconfig.e2e.json'
+    })
+
+  },
+
+
+  onComplete: () => {
+    var reporter = require('cucumber-html-reporter');
+    var options = {
+      theme: 'bootstrap',
+      jsonFile: 'src/assets/automation/results.json',
+      output: 'src/assets/automation/index.html',
+      reportSuiteAsScenarios: true,
+      scenarioTimestamp: true,
+      launchReport: true,
+      metadata: {
+        "Platform": "Linux",
+        "Parallel": "Scenarios",
+        "Executed": "Remote",
+    }
+  };
+
+    reporter.generate(options);
+  },
 };
