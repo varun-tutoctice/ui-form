@@ -9,18 +9,18 @@ Before(() => (app = new AppPage()));
 
 // Scenario 1
 
-Given("User is on existing product page", { timeout: 2 * 20000 }, async () => {
+Given("User added new product information into the system", { timeout: 2 * 20000 }, async () => {
   await app.navigateToExisting();
   await browser.sleep(1000);
 });
 
-When("user needs to check table", { timeout: 2 * 20000 }, async () => {
+When("User is on existing product page", { timeout: 2 * 20000 }, async () => {
   await app.s(4000);
 });
 
 
 Then(
-  "user sees product get added to database",
+  "User sees that the product information was added to the database",
   { timeout: 2 * 20000 },
   async () => {
  //   await alert(window.location.pathname);

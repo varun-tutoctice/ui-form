@@ -9,22 +9,27 @@ export class AppPage {
   //   );
   // }
 
+  navigateTo(): Promise<unknown> {
+    return browser.get(browser.baseUrl) as Promise<unknown>;
+  }
+
+
   public navigateToHomepage() {
     return browser.get(
-      `http://localhost:4200/home`
+      `${browser.baseUrl}/home`
     );
   }
 
 
   public navigateToExisting() {
     return browser.get(
-      `http://localhost:4200/home/existing`
+      `${browser.baseUrl}/home/existing`
     );
   }
 
   public navigateToContact() {
     return browser.get(
-      `http://localhost:4200/home/existing`
+      `${browser.baseUrl}/home/existing`
     );
   }
 

@@ -26,6 +26,7 @@ module.exports = function (config) {
     },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/ui-form'),
+      reports: ['lcovonly'],
       subdir: '.',
       reporters: [
         { type: 'html' },
