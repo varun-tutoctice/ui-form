@@ -1,4 +1,5 @@
 
+
 import { FormsModule } from '@angular/forms';
 import { InvokeService } from './../Services/invoke.service';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
@@ -8,6 +9,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule, ToastrService} from 'ngx-toastr';
 import { ContactComponent } from './contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 describe('ContactComponent', () => {
   let service: InvokeService;
@@ -18,7 +21,7 @@ describe('ContactComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ContactComponent ],
       providers: [InvokeService, {provide: ToastrService, useClass: ToastrService}],
-      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule, ReactiveFormsModule,ToastrModule.forRoot({preventDuplicates: true})]
+      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, ToastrModule.forRoot({preventDuplicates: true})]
     })
     .compileComponents();
     service = TestBed.inject(InvokeService);
@@ -48,8 +51,8 @@ describe('ContactComponent', () => {
 
 
   it('Show data posted onSubmit',()=>{
-    component.onSubmit('Test');
-   // expect(component.onSubmit('Test')).toBeTruthy();
+    var run = component.onSubmit('Test');
+    expect(run).toBeUndefined();
  })
 
 });

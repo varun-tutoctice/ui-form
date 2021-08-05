@@ -9,6 +9,7 @@ import { Observable, Observer } from 'rxjs';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule, ToastrService} from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ExistingComponent', () => {
   let service: InvokeService;
@@ -19,7 +20,7 @@ describe('ExistingComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ExistingComponent ],
       providers: [InvokeService, {provide: ToastrService, useClass: ToastrService}],
-      imports: [HttpClientTestingModule, RouterTestingModule, ReactiveFormsModule,ToastrModule.forRoot({preventDuplicates: true})]
+      imports: [HttpClientTestingModule, RouterTestingModule, ReactiveFormsModule, BrowserAnimationsModule, ToastrModule.forRoot({preventDuplicates: true})]
     })
     .compileComponents();
     service = TestBed.inject(InvokeService);
